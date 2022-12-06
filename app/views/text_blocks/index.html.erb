@@ -1,0 +1,12 @@
+<div class="editor" data-controller="blocks" data-action="blocks#clickEdit" data-blocks-value="<%= @blocks %>">
+  <div data-action="load@window->blocks#display" id="display">
+  </div>
+
+  <div class="entry-container">
+    <input id="entry" data-action="keyup->blocks#add blocks#showCommands" data-blocks-target="entry" placeholder="Type / to format" />
+  </div>
+
+  <div class="hide" data-blocks-target="command" id="format-block">
+    <button data-blocks-target="format" data-value="h1" data-action="blocks#format">Heading 1</button>
+  </div>
+</div>
