@@ -25,12 +25,6 @@ To get a local copy up and running follow these simple steps.
 - Change into the project directory, run
 `cd notion-text-editor`
 
-### Prerequisites
-
-- Ruby: >=2.6.3
-- Rails: >=5.2.3
-- Postgres: >=9.5
-
 ### Setup
 
 Install gems with:
