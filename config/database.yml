@@ -3,8 +3,8 @@ default: &default
   adapter: postgresql
   host: localhost
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: notion
-  password: notion123
+  username:  <%= ENV["NOTION_UNAME"] %>
+  password:  <%= ENV["NOTION_PWORD"] %>
 
 development:
   <<: *default
@@ -17,5 +17,5 @@ test:
 production:
   <<: *default
   database: notion_text_block_production
-  username: <%= ENV["WWCUSERNAME"] %>
-  password: <%= ENV["WCCPASSWORD"] %>
+  username: <%= ENV["NOTION_UNAME"] %>
+  password: <%= ENV["NOTION_PWORD"] %>
