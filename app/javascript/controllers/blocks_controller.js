@@ -66,8 +66,6 @@ export default class extends Controller {
       .then(data => data)
 
       this.addBlock(block)
-      // this.entryTarget.classList.remove(block.format);
-      console.log(block.format)
       inp.value = ""
       block.format = ""
     }
@@ -95,6 +93,7 @@ export default class extends Controller {
   }
 
   edit() {
+    inp.style.visibility = "hidden";
     let object = {
       entry: this.element.innerHTML,
       format: this.element.dataset.format,
@@ -132,5 +131,10 @@ export default class extends Controller {
     })
     .then(response => response.json())
     .then(data => data)
+  }
+
+  clickEdit() {
+    inp.style.visibility = "visible";
+    inp.focus();
   }
 }
